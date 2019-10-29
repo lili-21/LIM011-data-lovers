@@ -1,0 +1,53 @@
+body{
+    background-image: url(imagenes/storm-clouds.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*padding: 0 100px;*/
+    color: black;
+}
+.imgPrincipal{
+    background-image: url(imagenes/personajes.jpg);
+    width: 600px;
+    height: 300px;
+    background-size: 100%;
+    margin: 50px 300px 0; 
+}
+.start{
+    margin: 50px 150px 0;
+    color: white;
+    background:black;
+    width: 70%;
+    border-radius: 15px; 
+    align-content: center;  
+    padding: 30px;
+}
+button{
+    width: 100px;
+    height: 20px;
+    margin: 20px 400px 0;
+    }
+.hide{
+    display: none !important;
+
+}
+.header{
+    background-image: url(imagenes/logo.png);
+    background-repeat: no-repeat;
+    background-size: 180px 150px;
+    height: 150px;
+    padding: 0 200px;
+    
+}
+.root{
+    display: inline-block;
+      
+}
+li{
+    display: block;
+    float: left;
+    margin: 10px;
+}
+.charater{
+    width: 150px;
+    height: 150px;
+}
