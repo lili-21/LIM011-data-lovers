@@ -1,23 +1,19 @@
 
 const btnEnter = document.getElementById('enter');
 btnEnter.addEventListener('click', () => {
-    document.getElementById('root').classList.remove('hide');
+    document.getElementById('principal').classList.remove('hide');
     document.getElementById('home').classList.add('hide');
 });
-import POTTER from './data/potter/potter.js'
 
-/**
- * import POKEMON from './data/pokemon/pokemon.js'
- * import LoL from './data/lol/lol.js'
- * '
- */
-
-/*import { example } from './data.js';
+import POTTER from './data/potter/potter.js';
+/*console.log(POTTER);*/
+import {filterData, sortData} from './data.js';
+console.log(filterData(POTTER, ""))
+console.log(sortData(POTTER, ""))
+//document.querySelector("#personajes-resumen").innerHTML = filterData(POTTER, "");
 
 
-console.log(example);*/
 
-/*
  
- * console.log(POTTER)
-*/
+
+

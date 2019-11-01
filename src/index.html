@@ -8,27 +8,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body> 
-    <div id = "home">
-      <figure class = "imgPrincipal"></figure>
-    <p class = "start" >
-      Una tragedia ha asolado el mundo mágico y ha repartido Incontratus por el mundo muggle. Como nuevo miembro de las Fuerzas Especiales del Estatuto del Secreto, deberás trabajar conjuntamente con otros magos y brujas 
-      de todo el mundo para resolver el misterio de la tragedia y evitar que el secreto mágico quede expuesto. Podrás especializarte en diferentes profesiones mágicas, cada una tendrá habilidades y destrezas únicas. 
-      Alista tu varita, avisa a tus amigos y prepárense para proteger al mundo mágico de la tragedia mundial. ¡Una nueva aventura mágica te espera! <br> 
-      <button href = "#" type = "button" id = "enter">INGRESAR</button></p></div>
-    <div id="root" class = "root hide">
-      <header id = "header" class = "header">
-      <h1>Conoce mas de tus Personajes</h1>
-      <select>
-        <option value=" ">FILTRAR POR</option><option value="casas">Casas</option><option value="varita">Varita</option>
-        <option value="patronus">Patronus</option></option></select><br> </li>
-        <li>ORDENAR</li></section></header><br>
-      <div id = "character" class = >
-        <li class = "people1"></li>
-        <li class = "people2"></li>
-        <li class = "people3"></li>
+    <div id="root">
+      <section id = "home">
+        <img src="imagenes/personajes.jpg" class = "img-principal"/>
+        <p class = "start" >
+        Una tragedia ha asolado el mundo mágico y ha repartido Incontratus por el mundo muggle. Como nuevo miembro de las Fuerzas Especiales del Estatuto del Secreto, deberás trabajar conjuntamente con otros magos y brujas 
+        de todo el mundo para resolver el misterio de la tragedia y evitar que el secreto mágico quede expuesto. Podrás especializarte en diferentes profesiones mágicas, cada una tendrá habilidades y destrezas únicas. 
+        Alista tu varita, avisa a tus amigos y prepárense para proteger al mundo mágico de la tragedia mundial. ¡Una nueva aventura mágica te espera! <br> 
+        <button href = "#" type = "button" id = "enter">INGRESAR</button>
+        </p>
+      </section>
+      <div id="principal" class = "principal hide">
+        <header id = "header" class = "header">
+          <img src="" alt="">
+          <nav>
+          <button type="button" >INICIO</button>
+          <select>
+            <option value=" ">FILTRAR POR</option>
+            <option value="casas">Casas</option>
+            <option value="varita">Varita</option>
+            <option value="patronus">Patronus</option>
+          </select>
+          <select>
+            <option value=" ">ORDENAR</option>
+            <option value="descendente">Descendente</option>
+            <option value="ascentente">Ascentente</option>
+          </select>
+          </nav>
+        </header>
+        <h1>Conoce mas de tus Personajes</h1>
+        <section id = "character">
+        </section>
       </div>
-
-     
     </div>
     <script type = "module" src="main.js"></script>
     
