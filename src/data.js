@@ -3,14 +3,14 @@
 // esta es una función de ejemplo
 
 const filterData = (data, condition) => {
-  const personajesFiltrados = []
+  const personajesFiltrados = [];
 
   data.forEach(function(personaje) {
     const personajeResumen = {
-      name: personaje.name,
-      image: personaje.image
+      name: personaje.name;
+      image: personaje.image;
     }
-    personajesFiltrados.push(personajeResumen)
+    personajesFiltrados.push(personajeResumen);
   });
 
   return personajesFiltrados;
