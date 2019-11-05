@@ -1,9 +1,31 @@
 import POTTER from './data/potter/potter.js';
 /*console.log(POTTER);*/
 import {filterData, sortData} from './data.js';
-console.log(filterData(POTTER, ""))
-console.log(sortData(POTTER, ""))
-document.querySelector("#list-character").innerHTML = filterData(POTTER, "personajesFiltrados");
+import potter from './data/potter/potter.js';
+console.log(filterData(POTTER, ""));
+
+
+const area = document.querySelector('#list-character');
+const createAElement = (obj) => {
+  return `
+    <figure class="list-personajes">
+    <img class= 'potter-img' alt="imagen de potter" src="${obj.image}"/>
+    <figcaption class= 'text-name'>
+    <h1 class='potter-name'><strong>${obj.name}</strong></h1>
+    </figcaption>
+    </figure>`;
+};
+let tarjeta = '';
+for (let i = 0; i < potter.length; i += 1) {
+  tarjeta += createAElement(potter[i]);
+}
+area.innerHTML = tarjeta;
+
+
+
+
+
+
 
 const btnEnter = document.getElementById('enter');
 btnEnter.addEventListener('click', () => {
@@ -35,7 +57,6 @@ selectElement.addEventListener('change', (event) => {
     document.getElementById('varita').classList.add('hide');
   }
 });
-
 const imgGryffindor = document.getElementById('gryffindor');
 imgGryffindor.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
@@ -81,8 +102,6 @@ imgDomesticos.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('patronus').classList.add('hide');
 });
-
-
 const btnAtras = document.getElementById('atras');
 btnAtras.addEventListener('click', () => {
 const filtro = document.getElementById('opciones-filtro');
