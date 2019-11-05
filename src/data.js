@@ -5,7 +5,7 @@ const filterData = (data, condition) => {
   data.forEach(function(personaje) {
     const personajeResumen = {
       name: personaje.name,
-      image: personaje.image,
+      image: personaje.image
     }
   personajesFiltrados.push(personajeResumen);
   });
