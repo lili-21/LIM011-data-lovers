@@ -2,9 +2,9 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Objetivos de la web](#2-objetivos-de-la-web)
+* [3. Planificación del proyecto](#3-planificación-del-proyecto)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Parte adicional-opcional (extensión)](#6-parte-adicional-opcional-extensión)
@@ -13,180 +13,45 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Resumen del proyecto
+En este proyecto hemos creado una web responsive pensada en todas las personas que estén interesadas en adentrarse en el mundo de Harry Potter: Wizards Unite. Aquí podrás encontrar los datos de los personajes que pertenecen a este mundo mágico, también podrás filtrarlos de acuerdo a tu preferencia.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
+## 2. Objetivos de las web
+- Conocer la funcionalidad de la web
+- Visualizar las características específicas de cada personaje a través de tarjetas
+- Ordenar alfabéticamente a los personajes
+- Conocer datos generales sobre las casas, núcleos de varitas y patronus
+- Filtrar los personajes según casa, varita y patronus
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
-simple de hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
-para el usuario.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-\* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
-
-## 2. Resumen del proyecto
-
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
-
-Como entregable final tendrás una página web que permita a los usuarios
-**visualizar, filtrar, ordenar, etc.**.
-
-Te proponemos una serie de datos de diferentes _temáticas_ para que los
-explores y decidas con cuál te interesa trabajar. Cada _set_ de datos viene con
-información básica sobre los datos y su estructura, y una lista de las
-necesidades de los usuarios que proviene de una investigación (_research_)
-hecha por el equipo de Laboratoria.
-
-Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
-posible para ayudarle a satisfacer sus necesidades.
-
-### Estos son datos que te proponemos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  * [Investigación con jugadores de LoL](/lol/README.md)
-
-* [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de
-  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
-  respectivas características mencionadas en la serie de novelas de Harry Potter
-  escrita por la autora británica J.K.Rowling.
-  * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
-
-
-## 3. Objetivos de aprendizaje
-
-El objetivo principal de este proyecto es que, entendiendo las necesidades de
-tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
-visualizar y manipular data.
-
-Revisa la lista y reflexiona sobre los objetivos que conseguiste en el
-proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual
-y de equipo.
-
-### UX
-
-- [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-- [ ] Crear prototipos para obtener _feedback_ e iterar.
-- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
-
-### HTML y CSS
-
-- [ ] Entender y reconocer por qué es importante el HTML semántico.
-- [ ] Identificar y entender tipos de selectores en CSS.
-- [ ] Entender como funciona `flexbox` en CSS.
-- [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
-
-### DOM
-
-- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
-- [ ] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
-
-### Javascript
-
-- [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
-- [ ] Manipular objects (key | value).
-- [ ] Entender el uso de condicionales (`if-else` | `switch`).
-- [ ] Entender el uso de bucles (`for` | `forEach`).
-- [ ] Entender la diferencia entre expression y statements.
-- [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
-- [ ] Utilizar ES Modules (`import` | `export`).
-
-### Pruebas Unitarias (_testing_)
-- [ ] Testear funciones (funciones puras).
-
-### Git y GitHub
-- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [ ] Colaborar en Github (pull requests).
-
-### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (`commit`/`push`) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo: toma como referencia 3 semanas.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios que deberás considerar para saber si has completado este proyecto
-son:
-
-### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+## 3. Planificación del proyecto
+Nuestro trabajo comenzó leyendo los requisitos del proyecto, seguido de la organización como dupla para la realización de historias de usuario, prototipos de baja y alta fidelidad y pruebas con usuarios que nos dieron las pautas para mejorar el prototipo.
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de entendimiento de tus usuarios.
+Las historias de usuario fueron nuestro punto de partida para iniciar el proyecto. En un inicio creamos seis historias en papel y desarrollamos más a detalle tres de ellas.
+![Historias de usuarios 1](historias-1.jpg) ![Historias de usuarios 2](historias-2.jpg)
+![Historias de usuarios detalladas](historia-extendidas.jpg).
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina de construir una historia de usuario antes
-de pasar a la siguiente (Cumple con Definición de Terminado + Criterios de
-Aceptación).
+Luego utilizamos los tableros en Trello para poder hacer la modificaciones necesarias de manera más práctica y mantenernos conectadas a pesar de no estar presencialmente juntas.
+Tablero Trello: https://trello.com/b/vqmL2UTM/data-lovers
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+A lo largo del proceso creamos bocetos -en papel- similares pero con pequeños detalles que fueron cambiando para mejorar la experiencia del usuario. Estos bocetos los testeamos con el equipo y otras estudiantes de Laboratoria que nos ayudó a llegar a una idea final.
+(IMAGEN)
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la
-[identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
-correspondiente a cada set de datos que elijas.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-#### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+Cuando finalmente estuvimos más seguras de la practicidad y claridad de la web que queríamos crear, realizamos en Figma un prototipo de alta fidelidad.
+(IMAGEN)
+Este prototipo lo testeamos con personas que no sabían nada del proyecto y nos dieron un feedback importante:
+- Si no iban a recibir nada a cambio, preferirían no registrarse
+- La web les dio la impresión que iban a jugar algo
+- Les gustaría tener más información que solo la de los personajes. Por ej. características de las casas y núcleos de varitas.
+Esto nos llevó a realizar cambios en el prototipo y completarlo con las imágenes finales.
+(IMAGEN)
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
