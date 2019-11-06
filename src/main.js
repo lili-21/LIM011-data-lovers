@@ -1,12 +1,12 @@
 import POTTER from './data/potter/potter.js';
 /*console.log(POTTER);*/
-import {filterData, sortData} from './data.js';
-import potter from './data/potter/potter.js';
+import {filterData, sortData,} from './data.js';
 /*console.log(filterData(POTTER, ""));*/
+// console.log(reverseData(POTTER))
 
-let tarjeta = '';
 const createAElement = mostrar => {
-  for (let i = 0; i < potter.length; i += 1) {
+  let tarjeta = '';
+  for (let i = 0; i < mostrar.length; i += 1) {
     tarjeta += `<figure class="list-personajes">
     <img class= 'potter-img' alt="imagen de potter" src="${mostrar[i].image}"/>
     <figcaption class= 'text-name'>
@@ -17,10 +17,9 @@ const createAElement = mostrar => {
   document.querySelector('#list-character').innerHTML = tarjeta;
 }
 
-
 const btnEnter = document.getElementById('enter');
 btnEnter.addEventListener('click', () => {
-  createAElement(filterData(potter))
+  createAElement(filterData(POTTER, null));
   document.getElementById('principal').classList.remove('hide');
   document.getElementById('home').classList.add('hide');
 });
@@ -32,15 +31,8 @@ btnInicio.addEventListener('click', () => {
 
 const selectOpcion = document.querySelector('#opciones-ordenar');
 selectOpcion.addEventListener('change', (event) => {
-  if (event.target.value === 'ascendente') {
-    createAElement(sortData(potter));
-    createAElement(filterData(potter)).style.display = 'none';
-  } else if (event.target.value === 'descendente') {
-    document.getElementById('varita').classList.remove('hide');
-    document.getElementById('character').classList.add('hide');
-    document.getElementById('house').classList.add('hide');
-    document.getElementById('patronus').classList.add('hide');
-  }});
+  createAElement(sortData(POTTER, event.target.value));
+});
 
 const selectElement = document.querySelector('#opciones-filtro');
 selectElement.addEventListener('change', (event) => {
@@ -63,9 +55,12 @@ selectElement.addEventListener('change', (event) => {
 });
 const imgGryffindor = document.getElementById('gryffindor');
 imgGryffindor.addEventListener('click', () => {
-  document.getElementById('character').classList.remove('hide');
   document.getElementById('house').classList.add('hide');
+  document.getElementById('character').classList.remove('hide');
+  document.getElementById('title-character').innerHTML = 'casa xxx';
+  createAElement(filterData(POTTER, { field: 'house', value: 'Gryffindor' }));
 });
+
 const imgHufflepuff = document.getElementById('hufflepuff');
 imgHufflepuff.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
