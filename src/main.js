@@ -57,7 +57,7 @@ const imgGryffindor = document.getElementById('gryffindor');
 imgGryffindor.addEventListener('click', () => {
   document.getElementById('house').classList.add('hide');
   document.getElementById('character').classList.remove('hide');
-  document.getElementById('title-character').innerHTML = 'casa xxx';
+  document.getElementById('title-character').innerHTML = 'Personajes de la Casa Gryffindor';
   createAElement(filterData(POTTER, { field: 'house', value: 'Gryffindor' }));
 });
 
@@ -65,31 +65,43 @@ const imgHufflepuff = document.getElementById('hufflepuff');
 imgHufflepuff.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('house').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes de la Casa Huffepuff';
+  createAElement(filterData(POTTER, { field: 'house', value: 'Hufflepuff' }));
 });
 const imgSlytherin = document.getElementById('slytherin');
 imgSlytherin.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('house').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes de la Casa Slytherin';
+  createAElement(filterData(POTTER, { field: 'house', value: 'Slytherin' }));
 });
 const imgRavenclaw = document.getElementById('ravenclaw');
 imgRavenclaw.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('house').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes de la Casa Ravenclaw';
+  createAElement(filterData(POTTER, { field: 'house', value: 'Ravenclaw' }));
 });
 const imgDragon = document.getElementById('dragon');
 imgDragon.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes con Varita de Fibra de Corazón de Dragon';
+  createAElement(filterData(POTTER, { field: 'core', value: 'dragon heartstring' }));
 });
 const imgFenix = document.getElementById('fenix');
 imgFenix.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes con Varita de Pluma de Fenix';
+  createAElement(filterData(POTTER, { field: 'wand', field: 'core', value: 'phoenix feather'}));
 });
 const imgUnicornio = document.getElementById('unicornio');
 imgUnicornio.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes con Varita de Pelo de Unicornio';
+  createAElement(filterData(POTTER, { field: 'core', value: 'unicorn tail-hair' && 'unicorn hair' }));
 });
 const imgsalvajes = document.getElementById('salvajes');
 imgsalvajes.addEventListener('click', () => {
