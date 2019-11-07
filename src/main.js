@@ -1,10 +1,7 @@
 import POTTER from './data/potter/potter.js';
-/*console.log(POTTER);*/
-import {filterData, sortData,} from './data.js';
-/*console.log(filterData(POTTER, ""));*/
-// console.log(reverseData(POTTER))
+import { filterData, sortData } from './data.js';
 
-const createAElement = mostrar => {
+const createAElement = (mostrar) => {
   let tarjeta = '';
   for (let i = 0; i < mostrar.length; i += 1) {
     tarjeta += `<figure class="list-personajes">
@@ -13,9 +10,9 @@ const createAElement = mostrar => {
     <h1 class='potter-name'><strong>${mostrar[i].name}</strong></h1>
     </figcaption>
     </figure>`
-}
+  }
   document.querySelector('#list-character').innerHTML = tarjeta;
-}
+};
 
 const btnEnter = document.getElementById('enter');
 btnEnter.addEventListener('click', () => {
@@ -87,36 +84,40 @@ imgDragon.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
   document.getElementById('title-character').innerHTML = 'Personajes con Varita de Fibra de Corazón de Dragon';
-  createAElement(filterData(POTTER, { field: 'core', value: 'dragon heartstring' }));
+  createAElement(filterData(POTTER, { field: ['wand', 'core'], value: 'dragon heartstring' }));
 });
 const imgFenix = document.getElementById('fenix');
 imgFenix.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
   document.getElementById('title-character').innerHTML = 'Personajes con Varita de Pluma de Fenix';
-  createAElement(filterData(POTTER, { field: 'wand', field: 'core', value: 'phoenix feather'}));
+  createAElement(filterData(POTTER, { field: ['wand', 'core'], value: 'phoenix feather' }));
 });
 const imgUnicornio = document.getElementById('unicornio');
 imgUnicornio.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
   document.getElementById('title-character').innerHTML = 'Personajes con Varita de Pelo de Unicornio';
-  createAElement(filterData(POTTER, { field: 'core', value: 'unicorn tail-hair' && 'unicorn hair' }));
+  createAElement(filterData(POTTER, { field: ['wand', 'core'], value: ['unicorn tail-hair', 'unicorn hair']}));
 });
 const imgsalvajes = document.getElementById('salvajes');
 imgsalvajes.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('patronus').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes con Patronus Salvajes';
+  createAElement(filterData(POTTER, { field: 'patronus', value: ['stag', 'otter', 'swan', 'doe', 'hare', 'hare', 'wolf', 'weasel', 'cedar', 'lynx'] }));
 });
 const imgDomesticos = document.getElementById('domesticos');
 imgDomesticos.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('patronus').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes con Patronus Domesticos';
+  createAElement(filterData(POTTER, { field: 'patronus', value: ['Jack Russell terrier', 'tabby cat', 'persian cat', 'horse'] }));
 });
 const btnAtras = document.getElementById('atras');
 btnAtras.addEventListener('click', () => {
-const filtro = document.getElementById('opciones-filtro');
-const valorFiltro = filtro.options[filtro.selectedIndex].value;
+  const filtro = document.getElementById('opciones-filtro');
+  const valorFiltro = filtro.options[filtro.selectedIndex].value;
   if (valorFiltro === 'casas') {
     document.getElementById('house').classList.remove('hide');
     document.getElementById('character').classList.add('hide');
