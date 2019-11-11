@@ -29,7 +29,6 @@ const filterData = (data, condition) => {
   }
   return personajesFiltrados;
 };
-
 const sortData = (data, sortOrder) => {
   if (sortOrder === 'ascendente') {
     return data.sort((a, b) => {
@@ -52,5 +51,4 @@ const sortData = (data, sortOrder) => {
     });
   }
 };
-
 export { filterData, sortData };

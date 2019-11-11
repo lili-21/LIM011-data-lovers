@@ -131,7 +131,7 @@ figure.group figure {
     flex-wrap: wrap;
     background: grey;
     width: 200px;
-    height: 320px;
+    height: 300px;
     margin: 10px 20px;
     border-radius: 20px;
     padding: 10px 10px;
@@ -139,17 +139,23 @@ figure.group figure {
 .potter-img{
     width: 150px;
     height: 200px;
-    margin:  0 20px;
+    margin:  10px 20px;
+    border-radius: 20px;
 }
 .modal-contenido{
-    background-color:gray;
-    width: 60%;
-    height: 90%;
+    background-color: #28344e;
+    width: 50%;
+    height: 80%;
     padding: 10px 20px;
     margin: 2% auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
 }
 .modal{
+    display: flex;
     background-color: rgba(0,0,0,.8);
     position: fixed;
     top:0;
@@ -162,4 +168,13 @@ figure.group figure {
 #miModal:target{
     opacity:1;
     pointer-events:auto;
+}
+.close{
+    display: flex;
+    align-self: flex-start;
+    font-size: xx-large;
+}
+h3{
+    margin: 5px;
+    padding: 0;
 }

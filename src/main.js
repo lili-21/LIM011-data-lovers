@@ -9,37 +9,35 @@ const createAElement = (mostrar) => {
     <figcaption class= 'text-name'>
     <h3 class='potter-name'><strong>${mostrar[i].name}</strong></h3>
     <a href="#miModal" class="linkModal" data-image="${mostrar[i].image}" data-name="${mostrar[i].name}"
-    data-gender="${mostrar[i].gender}"data-house="${mostrar[i].house}"
+    data-gender="${mostrar[i].gender}"data-species="${mostrar[i].species}"data-house="${mostrar[i].house}"
     data-patronus="${mostrar[i].patronus}"data-actor="${mostrar[i].actor}">Ver más</a>
     </figcaption>
     </figure>`;
   }
   document.querySelector('#list-character').innerHTML = tarjeta;
-
-  let elementsArray = document.querySelectorAll(".linkModal");
-  elementsArray.forEach(function(elem) {
-      elem.addEventListener("click", function() {
-        document.getElementById('personajeImagen').src = elem.dataset.image;
-        document.getElementById('personajeNombre').innerHTML = elem.dataset.name;
-        document.getElementById('personajeGenero').innerHTML = elem.dataset.gender;
-        document.getElementById('personajeCasa').innerHTML = elem.dataset.house;
-        document.getElementById('personajePatronus').innerHTML = elem.dataset.patronus;
-        document.getElementById('personajeActor').innerHTML = elem.dataset.actor;
-      });
+  const elementsArray = document.querySelectorAll('.linkModal');
+  elementsArray.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      document.getElementById('personajeImagen').src = elem.dataset.image;
+      document.getElementById('personajeNombre').innerHTML = elem.dataset.name;
+      document.getElementById('personajeGenero').innerHTML = elem.dataset.gender;
+      document.getElementById('personajeEspecie').innerHTML = elem.dataset.species;
+      document.getElementById('personajeCasa').innerHTML = elem.dataset.house;
+      document.getElementById('personajePatronus').innerHTML = elem.dataset.patronus;
+      document.getElementById('personajeActor').innerHTML = elem.dataset.actor;
+    });
   });
-
 };
-
 const btnEnter = document.getElementById('enter');
 btnEnter.addEventListener('click', () => {
   createAElement(filterData(POTTER, null));
-  document.getElementById('title-character').innerHTML = 'Conoce de tus personajes';
+  document.getElementById('title-character').innerHTML = 'Conoce de tus Personajes';
   document.getElementById('principal').classList.remove('hide');
   document.getElementById('home').classList.add('hide');
 });
 const btnInicio = document.getElementById('inicio');
 btnInicio.addEventListener('click', () => {
-  document.getElementById('home').classList.remove('hide'); 
+  document.getElementById('home').classList.remove('hide');
   document.getElementById('principal').classList.add('hide');
 });
 
@@ -115,7 +113,7 @@ imgUnicornio.addEventListener('click', () => {
   document.getElementById('character').classList.remove('hide');
   document.getElementById('varita').classList.add('hide');
   document.getElementById('title-character').innerHTML = 'Personajes con Varita de Pelo de Unicornio';
-  createAElement(filterData(POTTER, { field: ['wand', 'core'], value: ['unicorn tail-hair', 'unicorn hair']}));
+  createAElement(filterData(POTTER, { field: ['wand', 'core'], value: ['unicorn tail-hair', 'unicorn hair'] }));
 });
 const imgsalvajes = document.getElementById('salvajes');
 imgsalvajes.addEventListener('click', () => {
