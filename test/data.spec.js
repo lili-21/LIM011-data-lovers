@@ -1,13 +1,13 @@
 // importamos la función `example`
-import { example } from "../src/data";
+import { sortData } from '../src/data.js';
+import POTTER from '../src/data/potter/potter.js';
 
-describe('example', () => {
-
+describe('sortData', () => {
   it('debería ser una función', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
-  describe('example', () => {
-    // escribe aquí tu test
+  it('debería ... ascendente', () => {
+    expect(sortData(POTTER, 'ascendente')[0].name).toBe('Argus Filch');
   });
 });

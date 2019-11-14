@@ -1,8 +1,8 @@
 /* Manejo de data */
 // esta es una función ade ejemplo
-//example condition: {field: house, value: Gryffindor} HOUSES
-//example condition: {field: patronus, value: ['aaa', 'stag']}  PATRONUS
-//example condition: {field: ['wand', 'core'], value: ['aaa', 'stag']}  WAND
+// example condition: {field: house, value: Gryffindor} HOUSES
+// example condition: {field: patronus, value: ['aaa', 'stag']}  PATRONUS
+// example condition: {field: ['wand', 'core'], value: ['aaa', 'stag']}  WAND
 const filterData = (data, condition) => {
   let personajesFiltrados = [];
   if (condition === null) {
@@ -14,17 +14,16 @@ const filterData = (data, condition) => {
         campoAFiltrar = personaje[condition.field[0]][condition.field[1]];
       } else {
         campoAFiltrar = personaje[condition.field];
-      } if (Array.isArray(condition.value)) {
+      }
+      if (Array.isArray(condition.value)) {
         if (condition.value.includes(campoAFiltrar)) {
           return true;
-        } /*else {
-          return false;
-        }*/
-      } if (campoAFiltrar === condition.value) {
+        }
+      }
+      if (campoAFiltrar === condition.value) {
         return true;
-      } /*else {
-        return false;
-      }*/
+      }
+      return false;
     });
   }
   return personajesFiltrados;
@@ -50,5 +49,6 @@ const sortData = (data, sortOrder) => {
       return 0;
     });
   }
+  return data;
 };
 export { filterData, sortData };
