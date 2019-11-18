@@ -6,8 +6,13 @@ describe('sortData', () => {
   it('debería ser una función', () => {
     expect(typeof sortData).toBe('function');
   });
-
+  it('debería ... potter', () => {
+    expect(sortData(POTTER, ' ')[0].name).toBe('Harry Potter');
+  });
   it('debería ... ascendente', () => {
+    expect(sortData(POTTER, 'ascendente')[0].name).toBe('Argus Filch');
+  });
+  it('La lista ya esta ordenada ascendente', () => {
     expect(sortData(POTTER, 'ascendente')[0].name).toBe('Argus Filch');
   });
   it('debería ... descendente', () => {
@@ -49,7 +54,6 @@ describe('filterData', () => {
   });
   it('debería ... domesticos', () => {
     const listaPatronus = ['Jack Russell terrier', 'tabby cat', 'persian cat', 'horse'];
-
     expect(listaPatronus.includes(filterData(POTTER, { field: 'patronus', value: listaPatronus })[0].patronus)).toBe(true);
   });
 });

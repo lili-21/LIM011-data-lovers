@@ -3,8 +3,10 @@
     padding: 0;
 }
 body{
+    font-family: 'Oswald', sans-serif;
     background-image: url(imagenes/fondo.png);
     background-repeat: no-repeat ;
+    background-repeat: repeat-y;
     background-attachment: fixed;
     background-size: 100%;
     color:white;
@@ -21,6 +23,7 @@ body{
     width: 100%;
 }
 .start{
+    font-family: 'Vollkorn', serif;
     margin: 50px auto;
     color: white;
     background:black;
@@ -33,10 +36,12 @@ body{
 .enter{
     width: 100px;
     height: 28px;
+    border-radius: 5px;
     border:2px solid #fecc20;
-    color: white;
+    color: whitesmoke;
     display: flex;
     align-self: center;
+    justify-content: center;
     margin: 20px 0 0;
     background-color: rgba(0,0,0,.5); 
 }
@@ -57,7 +62,7 @@ body{
 img.logo{
     width: 10%;
     min-width: 100px;
-    padding: 20px 80px 10px 0;
+    padding: 20px 40px 10px 0;
 }
 .menu{
     display: flex;
@@ -68,9 +73,14 @@ img.logo{
 }
 .opciones{
     width: 150px;
+    min-width: 50px;
     height: 38px;
+    min-height: 25px;
     margin: 0 40px 0;
-            
+    border-radius: 5px;
+    border: 4px solid #f8d562;
+    color: white;
+    background-color: black;
 }
 h1{
     display: flex;
@@ -112,7 +122,7 @@ figure.group figure {
     height: 200px;
     margin: 20px;
     border-radius: 20px;
-    
+    border: 10px solid #E5E5E5;
 }
 .varita figure.group {
     display: flex;
@@ -128,6 +138,7 @@ figure.group figure {
     height: 200px;
     margin: 20px;
     border-radius: 20px;
+    border: 10px solid #E5E5E5;
 }
 .patronus figure.group {
     display: flex;
@@ -143,16 +154,18 @@ figure.group figure {
     height: 200px;
     margin: 20px;
     border-radius: 20px;
+    border: 10px solid #E5E5E5;
 } 
 .text-center {
     text-align: center;
+    color:#f8d562;
+    font-size: 40px;
 }
 .list-character{
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
-    
 }
 .list-personajes {
     display: inline-block;
@@ -162,9 +175,18 @@ figure.group figure {
     background: grey;
     width: 200px;
     height: 300px;
-    margin: 10px 20px;
+    margin: 10px 30px;
     border-radius: 20px;
     padding: 10px 10px;
+}
+.potter-name{
+    font-family: 'Trade Winds', cursive;
+}
+.text-name{
+    color:#072450;
+}
+a{
+    color: #fecc20;
 }
 .character{
     padding: 200px 0;
@@ -174,6 +196,7 @@ figure.group figure {
     height: 200px;
     margin:  10px 20px;
     border-radius: 20px;
+    border: 4px solid #C0C0C0;
 }
 .modal-contenido{
     background-color: #28344e;
@@ -186,6 +209,10 @@ figure.group figure {
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
+    border: 10px solid #fecc20;
+    color: #C0C0C0;
+    font-size: 16px;
+    font-family: 'BenchNine', sans-serif;
 }
 .modal{
     display: flex;
@@ -201,14 +228,30 @@ figure.group figure {
 #miModal:target{
     opacity:1;
     pointer-events:auto;
+    z-index: 3;
 }
 .close{
     display: flex;
-    align-self: flex-start;
+    align-self: flex-end;
     font-size: xx-large;
     color: white;
 }
 h3{
     margin: 5px;
     padding: 0;
+}
+#atras{
+    margin: 0 5%;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+}
+#personajeImagen{
+    width: 180px;
+    height: 200px;
+    margin:  10px 20px;
+    border-radius: 20px;
+    border: 8px solid #C0C0C0;
+    display: flex;
+    align-items: flex-start;
 }

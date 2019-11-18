@@ -11,7 +11,7 @@ const createAElement = (actores) => {
     <h3 class='potter-name'><strong>${actores[i].name}</strong></h3>
     <a href="#miModal" class="linkModal" data-image="${actores[i].image}" data-name="${actores[i].name}"
     data-gender="${actores[i].gender}"data-species="${actores[i].species}"data-house="${actores[i].house}"
-    data-patronus="${actores[i].patronus}"data-actor="${actores[i].actor}">Ver más</a>
+    data-patronus="${actores[i].patronus}"data-actor="${actores[i].actor}"data-wand="${actores[i].wand.core}">Ver más</a>
     </figcaption>
     </figure>`;
   }
@@ -26,6 +26,7 @@ const createAElement = (actores) => {
       document.getElementById('personajeCasa').innerHTML = elem.dataset.house;
       document.getElementById('personajePatronus').innerHTML = elem.dataset.patronus;
       document.getElementById('personajeActor').innerHTML = elem.dataset.actor;
+      document.getElementById('personajeVarita').innerHTML = elem.dataset.wand;
     });
   });
 };
@@ -33,7 +34,7 @@ const btnEnter = document.getElementById('enter');
 btnEnter.addEventListener('click', () => {
   personajes = filterData(POTTER, null);
   createAElement(personajes);
-  document.getElementById('title-character').innerHTML = 'Conoce de tus Personajes';
+  document.getElementById('title-character').innerHTML = 'Conoce a los Personajes';
   document.getElementById('principal').classList.remove('hide');
   document.getElementById('home').classList.add('hide');
 });
