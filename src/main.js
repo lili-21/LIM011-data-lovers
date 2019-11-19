@@ -48,6 +48,11 @@ btnInicio.addEventListener('click', () => {
   document.getElementById('varita').classList.add('hide');
   document.getElementById('patronus').classList.add('hide');
 });
+const imgLogo = document.getElementById('logo');
+imgLogo.addEventListener('click', () => {
+  document.getElementById('principal').classList.add('hide');
+  document.getElementById('home').classList.remove('hide');
+});
 
 const selectOpcion = document.querySelector('#opciones-ordenar');
 selectOpcion.addEventListener('change', (event) => {
@@ -61,16 +66,25 @@ selectElement.addEventListener('change', (event) => {
     document.getElementById('character').classList.add('hide');
     document.getElementById('varita').classList.add('hide');
     document.getElementById('patronus').classList.add('hide');
+    document.getElementById('profesion').classList.add('hide');
   } else if (event.target.value === 'varita') {
     document.getElementById('varita').classList.remove('hide');
     document.getElementById('character').classList.add('hide');
     document.getElementById('house').classList.add('hide');
     document.getElementById('patronus').classList.add('hide');
+    document.getElementById('profesion').classList.add('hide');
   } else if (event.target.value === 'patronus') {
     document.getElementById('patronus').classList.remove('hide');
     document.getElementById('character').classList.add('hide');
     document.getElementById('house').classList.add('hide');
     document.getElementById('varita').classList.add('hide');
+    document.getElementById('profesion').classList.add('hide');
+  } else if (event.target.value === 'profesion') {
+    document.getElementById('profesion').classList.remove('hide');
+    document.getElementById('character').classList.add('hide');
+    document.getElementById('house').classList.add('hide');
+    document.getElementById('varita').classList.add('hide');
+    document.getElementById('patronus').classList.add('hide');
   }
 });
 const imgGryffindor = document.getElementById('gryffindor');
@@ -146,6 +160,22 @@ imgDomesticos.addEventListener('click', () => {
   personajes = filterData(POTTER, { field: 'patronus', value: ['Jack Russell terrier', 'tabby cat', 'persian cat', 'horse'] });
   createAElement(personajes);
 });
+const imgMaestro = document.getElementById('maestro');
+imgMaestro.addEventListener('click', () => {
+  document.getElementById('character').classList.remove('hide');
+  document.getElementById('profesion').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes que son Maestros';
+  personajes = filterData(POTTER, { field: 'hogwartsStaff', value: true });
+  createAElement(personajes);
+});
+const imgEstudiante = document.getElementById('estudiante');
+imgEstudiante.addEventListener('click', () => {
+  document.getElementById('character').classList.remove('hide');
+  document.getElementById('profesion').classList.add('hide');
+  document.getElementById('title-character').innerHTML = 'Personajes que son Estudiantes';
+  personajes = filterData(POTTER, { field: 'hogwartsStudent', value: true });
+  createAElement(personajes);
+});
 const btnAtras = document.getElementById('atras');
 btnAtras.addEventListener('click', () => {
   const filtro = document.getElementById('opciones-filtro');
@@ -155,15 +185,24 @@ btnAtras.addEventListener('click', () => {
     document.getElementById('character').classList.add('hide');
     document.getElementById('varita').classList.add('hide');
     document.getElementById('patronus').classList.add('hide');
+    document.getElementById('profesion').classList.add('hide');
   } else if (valorFiltro === 'varita') {
     document.getElementById('varita').classList.remove('hide');
     document.getElementById('character').classList.add('hide');
     document.getElementById('house').classList.add('hide');
     document.getElementById('patronus').classList.add('hide');
+    document.getElementById('profesion').classList.add('hide');
   } else if (valorFiltro === 'patronus') {
     document.getElementById('patronus').classList.remove('hide');
     document.getElementById('character').classList.add('hide');
     document.getElementById('house').classList.add('hide');
     document.getElementById('varita').classList.add('hide');
+    document.getElementById('profesion').classList.add('hide');
+  } else if (valorFiltro === 'profesion') {
+    document.getElementById('profesion').classList.remove('hide');
+    document.getElementById('character').classList.add('hide');
+    document.getElementById('house').classList.add('hide');
+    document.getElementById('varita').classList.add('hide');
+    document.getElementById('patronus').classList.add('hide');
   }
 });

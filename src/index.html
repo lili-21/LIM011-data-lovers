@@ -21,7 +21,7 @@
       </section>
       <div id="principal" class = "principal hide">
         <header id = "header" class = "header">
-        <img src = "imagenes/logo-harry.png" class = "logo">
+        <img src = "imagenes/logo-harry.png" class = "logo" href = "#" id = "logo">
           <nav class ="menu"> 
           <button type="button" id = "inicio" class = "opciones">INICIO</button>
           <select class = "opciones" id ="opciones-filtro">
@@ -29,6 +29,7 @@
             <option value="casas">Casas</option>
             <option value="varita">Varita</option>
             <option value="patronus">Patronus</option>
+            <option value="profesion">Profesión</option>
           </select>
           <select class = "opciones" id = "opciones-ordenar">
             <option value =" ">ORDENAR</option>
@@ -39,14 +40,14 @@
         </header>
         <div id= "character" class = "character">
           <h2 class = "text-center" id = "title-character"></h2>
-          <button type = "button" id = "atras">Atras</button>
+          <img id = "atras" class = "atras" src="imagenes/atras.png">
         <section id = "list-character" class = "list-character">
         </section>
       </div>
       <div id="miModal" class="modal">
           <div class="modal-contenido" id="modal-contenido">
             <a href="#" class = "close">X</a><br>
-            <img class= "potter-img" id = "personajeImagen"/>
+            <img class= "potter-img" id = "personajeImagen">
             <h3 class="datos">Nombre: <span id="personajeNombre"></span></h3>
             <h3 class="datos">Genero: <span id="personajeGenero"></span></h3>
             <h3 class="datos">Especie: <span id="personajeEspecie"></span></h3>
@@ -104,6 +105,19 @@
           <figure>
             <img src="imagenes/patronusdomestico.jpg" href = "#" class = "img-patronus" id = "domesticos">
             <figcaption>PATRONUS DOMESTICOS</figcaption>
+          </figure>
+        </figure> 
+      </div>
+      <div id = "profesion" class = "profesion hide">
+        <h2 class = "text-center">TIPOS DE PROFESIÓN</h2>
+        <figure class="group">
+          <figure>
+            <img src="imagenes/profesor.jpg" href = "#" class = "img-profesion" id = "maestro">
+            <figcaption>MAESTROS</figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/alumnos.jpg" href = "#" class = "img-profesion" id = "estudiante">
+            <figcaption>ESTUDIANTES</figcaption>
           </figure>
         </figure> 
       </div>

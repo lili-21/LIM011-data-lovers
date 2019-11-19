@@ -31,8 +31,9 @@ Se comenzó leyendo los requisitos del proyecto, seguido de la organización com
 ## 3.1 Historias de usuario
 
 Las historias de usuario fueron el punto de partida para iniciar el proyecto. En un inicio se hizo seis historias en papel y se desarrollo más a detalle tres de ellas.
-![Historias de usuarios 1](historias-1.jpg) ![Historias de usuarios 2](historias-2.jpg)
-![Historias de usuarios detalladas](historia-extendidas.jpg).
+![Historias de usuarios 1](src/imagenes/historias1.JPEG) 
+![Historias de usuarios 2](src/imagenes/historias2.JPEG)
+![Historias de usuarios 3](src/imagenes/historias3.JPEG)
 
 Luego se utilizo los tableros en Trello para poder hacer las modificaciones necesarias de manera más práctica y asi mantener el conecto entre la dupla.
 Tablero Trello: https://trello.com/b/vqmL2UTM/data-lovers

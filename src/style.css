@@ -156,6 +156,22 @@ figure.group figure {
     border-radius: 20px;
     border: 10px solid #E5E5E5;
 } 
+.profesion figure.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 200px 0;
+}
+.img-profesion{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 10px solid #E5E5E5;
+} 
 .text-center {
     text-align: center;
     color:#f8d562;
@@ -240,11 +256,12 @@ h3{
     margin: 5px;
     padding: 0;
 }
-#atras{
-    margin: 0 5%;
-    width: 60px;
-    height: 30px;
-    border-radius: 10px;
+.atras{
+    width: 100%;
+    max-width: 50px;
+    position: fixed;
+    padding-left: 5%;
+    
 }
 #personajeImagen{
     width: 180px;
