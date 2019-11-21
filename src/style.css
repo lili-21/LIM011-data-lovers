@@ -5,8 +5,8 @@
 body{
     font-family: 'Oswald', sans-serif;
     background-image: url(imagenes/fondo.png);
-    background-repeat: no-repeat ;
-    background-repeat: repeat-y;
+    /*background-repeat: no-repeat ;
+    background-repeat: repeat-y;*/
     background-attachment: fixed;
     background-size: 100%;
     color:white;

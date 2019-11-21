@@ -31,9 +31,10 @@ Se comenzó leyendo los requisitos del proyecto, seguido de la organización com
 ## 3.1 Historias de usuario
 
 Las historias de usuario fueron el punto de partida para iniciar el proyecto. En un inicio se hizo seis historias en papel y se desarrollo más a detalle tres de ellas.
-![Historias de usuarios 1](src/imagenes/historias1.JPEG) 
-![Historias de usuarios 2](src/imagenes/historias2.JPEG)
-![Historias de usuarios 3](src/imagenes/historias3.JPEG)
+
+![IMAGEN](src/imagenes/historia1.jpeg)
+![IMAGEN](src/imagenes/historia2.jpeg)
+![IMAGEN](src/imagenes/historia3.jpeg)
 
 Luego se utilizo los tableros en Trello para poder hacer las modificaciones necesarias de manera más práctica y asi mantener el conecto entre la dupla.
 Tablero Trello: https://trello.com/b/vqmL2UTM/data-lovers
@@ -48,6 +49,10 @@ Este prototipo se testeo con ideas y sugerencias de personas a lazar los cuales 
 - Las personas prefieren no registrarse si no reciben nada a cambio.
 - La web dio la impresión que se podia jugar el juego Wizards Unite.
 - Desean tener más información como las características de las casas y núcleos de varitas.
+![IMAGEN](src/imagenes/protipoBaja0.JPEG)
+![IMAGEN](src/imagenes/protipoBaja1.JPEG)
+
+![IMAGEN](src/imagenes/prototipoBaja.JPEG)
 
 ## 4.2 Prototipo de alta fidelidad
 
