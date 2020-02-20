@@ -6,9 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="main.js"></script>
+  <body> 
+    <div id="root">
+      <section id = "home">
+        <img src="imagenes/logo-harry.png" class = "img-principal"/>
+        <p class = "start" >
+          Hemos creado esta página para que conozcas más de los personajes. 
+          Ya que una tragedia ha asolado el mundo mágico y ha repartido Incontratus por el mundo muggle. 
+          Queremos que estés preparadx para defender a tus personajes favoritos.
+        <button href = "#" type = "button" class = "enter" id = "enter">INGRESAR</button>
+        </p>
+      </section>
+      <div id="principal" class = "principal hide">
+        <header id = "header" class = "header">
+        <img src = "imagenes/logo-harry.png" class = "logo" href = "#" id = "logo">
+          <nav class ="menu"> 
+          <button type="button" id = "inicio" class = "opciones">INICIO</button>
+          <select class = "opciones" id ="opciones-filtro">
+            <option value=" ">FILTRAR POR</option>
+            <option value="casas">Casas</option>
+            <option value="varita">Varita</option>
+            <option value="patronus">Patronus</option>
+            <option value="profesion">Profesión</option>
+          </select>
+          <select class = "opciones" id = "opciones-ordenar">
+            <option value =" ">ORDENAR</option>
+            <option value ="ascendente">A - Z</option>
+            <option value ="descendente">Z - A</option>
+          </select>
+          </nav>
+        </header>
+        <div id= "character" class = "character">
+          <h2 class = "text-center" id = "title-character"></h2>
+          <img id = "atras" class = "atras" src="imagenes/atras.png">
+        <section id = "list-character" class = "list-character">
+        </section>
+      </div>
+      <div id="miModal" class="modal">
+          <div class="modal-contenido" id="modal-contenido">
+            <a href="#" class = "close">X</a><br>
+            <img class= "potter-img" id = "personajeImagen">
+            <h3 class="datos">Nombre: <span id="personajeNombre"></span></h3>
+            <h3 class="datos">Genero: <span id="personajeGenero"></span></h3>
+            <h3 class="datos">Especie: <span id="personajeEspecie"></span></h3>
+            <h3 class="datos">Casa: <span id="personajeCasa"></span></h3>
+            <h3 class="datos">Patronus: <span id="personajePatronus"></span></h3>
+            <h3 class="datos">Actor: <span id="personajeActor"></span></h3>
+            <h3 class="datos">Varita: <span id="personajeVarita"></span></h3>
+          </div>  
+        </div>
+      <div id = "house" class = "house hide">
+        <h2 class = "text-center">TIPOS DE CASAS</h2>
+        <figure class="group">
+          <figure>
+            <img src="imagenes/casa gryffindor.jpg" href = "#" class = "img-house" id = "gryffindor">
+            <figcaption>CASA GRYFFINDOR</figcaption>
+          </figure> 
+          <figure>
+            <img src="imagenes/casa hufflepuff.jpg" href = "#" class = "img-house" id = "hufflepuff">
+            <figcaption>CASA HUFFLEPUFF</figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/casa slytherin.jpg" href = "#" class = "img-house" id = "slytherin">
+            <figcaption>CASA SLYTHERIN</figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/casa ravenclaw.jpg" href = "#" class = "img-house" id = "ravenclaw">
+            <figcaption>CASA RAVENCLAW</figcaption>
+          </figure>
+        </figure>
+      </div>
+      <div id = "varita" class = "varita hide">
+        <h2 class = "text-center">TIPOS DE VARITAS</h2>
+        <figure class="group">
+          <figure>
+            <img src ="imagenes/dragonhearttring.png" href = "#" class = "img-varitas" id = "dragon">
+            <figcaption>VARITA DE DRAGON</figcaption>
+          </figure>
+          <figure>
+            <img src = "imagenes/fenix.jpg" href = "#" class = "img-varitas" id = "fenix">
+            <figcaption>VARITA DE PLUMA DE FENIX</figcaption>
+          </figure>
+          <figure>
+            <img src = "imagenes/unicornio.jpg"  href = "#" class = "img-varitas" id = "unicornio">
+            <figcaption>VARITA DE PELO DE UNICORNIO</figcaption>
+          </figure>
+        </figure> 
+      </div>
+      <div id = "patronus" class = "patronus hide">
+        <h2 class = "text-center">TIPOS DE PATRONUS</h2>
+        <figure class="group">
+          <figure>
+            <img src="imagenes/patronussalvaje.jpg" href = "#" class = "img-patronus" id = "salvajes">
+            <figcaption>PATRONUS SALVAJES</figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/patronusdomestico.jpg" href = "#" class = "img-patronus" id = "domesticos">
+            <figcaption>PATRONUS DOMESTICOS</figcaption>
+          </figure>
+        </figure> 
+      </div>
+      <div id = "profesion" class = "profesion hide">
+        <h2 class = "text-center">TIPOS DE PROFESIÓN</h2>
+        <figure class="group">
+          <figure>
+            <img src="imagenes/profesor.jpg" href = "#" class = "img-profesion" id = "maestro">
+            <figcaption>MAESTROS</figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/alumnos.jpg" href = "#" class = "img-profesion" id = "estudiante">
+            <figcaption>ESTUDIANTES</figcaption>
+          </figure>
+        </figure> 
+      </div>
+    </div>
+  </div>
+    <script type = "module" src="main.js"></script>
   </body>
 </html>
